@@ -1,18 +1,11 @@
 # Задача 1
 
-number = int(input('Введите число от 0 до 10: '))
-
-while number > 0:
-    if number < 10:
-        number = number ** 2
-        print(number)
+while True:
+    num = int(input('Введите число больше 0, но меньше 10: '))
+    if 0 < num < 10:
+        print(num ** 2)
         break
-    else:
-        print('Неверно. Попробуйте еще раз!')
-        number = int(input('Введите число от 0 до 10: '))
-else:
-    print('Неверно. Попробуйте еще раз!')
-    number = int(input('Введите число от 0 до 10: '))
+    print(' Неверное число !')
 
 # Задача 2
 
