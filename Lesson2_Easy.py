@@ -14,11 +14,12 @@
 # Подсказка: воспользоваться методом .format()
 
 fruits = ['яблоко', 'банан', 'киви', 'арбуз']
-print('1. {:>7}'.format(fruits[0]))
-print('2. {:>7}'.format(fruits[1]))
-print('3. {:>7}'.format(fruits[2]))
-print('4. {:>7}'.format(fruits[3]))
 
+right_offset = len(max(fruits, key = len))
+for index, item in enumerate(fruits, start = 1):
+    print('{} {}'.format(index, item.rjust(right_offset)))
+
+    
 # Задача-2:
 # Даны два произвольные списка.
 # Удалите из первого списка элементы, присутствующие во втором списке.
@@ -26,7 +27,7 @@ print('4. {:>7}'.format(fruits[3]))
 numbers1 = [1, 2, 3, 4]
 numbers2 = [3, 4, 5, 6]
 for number in numbers2:
-    if number in numbers1:
+    while number in numbers1:
         numbers1.remove(number)
 print(numbers1)
 
